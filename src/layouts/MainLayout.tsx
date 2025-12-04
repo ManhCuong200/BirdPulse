@@ -1,9 +1,13 @@
 import { Navbar } from "@/components/shared/Navbar"
 import { Outlet } from "react-router-dom"
+import { LanguageSwitcher } from "@/components/common/LanguageSwitcher"
 
 export function MainLayout() {
     return (
-        <div className="min-h-screen bg-background font-sans antialiased">
+        <div className="min-h-screen bg-background font-sans antialiased relative">
+            <div className="fixed top-4 right-20 z-50">
+                <LanguageSwitcher />
+            </div>
             <Navbar />
             <main className="flex-1">
                 <Outlet />

@@ -1,0 +1,12 @@
+{
+    "common": {
+        "welcome": "Welcome to BidPulse",
+        "loading": "Loading...",
+        "error": "An error occurred"
+    },
+    "auction": {
+        "placeBid": "Place Bid",
+        "currentPrice": "Current Price",
+        "buyNow": "Buy Now"
+    }
+}

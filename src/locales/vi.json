@@ -1,0 +1,12 @@
+{
+    "common": {
+        "welcome": "Chào mừng đến với BidPulse",
+        "loading": "Đang tải...",
+        "error": "Đã xảy ra lỗi"
+    },
+    "auction": {
+        "placeBid": "Đặt giá",
+        "currentPrice": "Giá hiện tại",
+        "buyNow": "Mua ngay"
+    }
+}
