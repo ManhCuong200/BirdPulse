@@ -1,0 +1,5 @@
+
+> bidpulse-ui@0.0.0 build
+> tsc && vite build
+
+src/pages/bidder/AuctionRoom.tsx(35,23): error TS6133: 'newBid' is declared but its value is never read.

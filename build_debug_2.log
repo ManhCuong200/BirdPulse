@@ -1,0 +1,10 @@
+
+> bidpulse-ui@0.0.0 build
+> tsc && vite build
+
+src/App.tsx(29,29): error TS2304: Cannot find name 'AuctionsPage'.
+src/App.tsx(30,29): error TS2304: Cannot find name 'CategoriesPage'.
+src/App.tsx(31,29): error TS2304: Cannot find name 'AboutPage'.
+src/App.tsx(38,59): error TS2304: Cannot find name 'AuctionsPage'.
+src/App.tsx(39,61): error TS2304: Cannot find name 'CategoriesPage'.
+src/App.tsx(40,56): error TS2304: Cannot find name 'AboutPage'.

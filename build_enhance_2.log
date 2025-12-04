@@ -1,0 +1,24 @@
+
+> bidpulse-ui@0.0.0 build
+> tsc && vite build
+
+src/components/seller/CreateAuctionForm.tsx(1,49): error TS2657: JSX expressions must have one parent element.
+src/components/seller/CreateAuctionForm.tsx(5,45): error TS1128: Declaration or statement expected.
+src/components/seller/CreateAuctionForm.tsx(6,41): error TS1109: Expression expected.
+src/components/seller/CreateAuctionForm.tsx(6,42): error TS1128: Declaration or statement expected.
+src/components/seller/CreateAuctionForm.tsx(7,37): error TS1161: Unterminated regular expression literal.
+src/components/seller/CreateAuctionForm.tsx(9,17): error TS1005: ',' expected.
+src/components/seller/CreateAuctionForm.tsx(11,11): error TS1136: Property assignment expected.
+src/components/seller/CreateAuctionForm.tsx(11,23): error TS1005: ';' expected.
+src/components/seller/CreateAuctionForm.tsx(19,2): error TS1128: Declaration or statement expected.
+src/components/seller/CreateAuctionForm.tsx(20,37): error TS1161: Unterminated regular expression literal.
+src/components/seller/CreateAuctionForm.tsx(21,33): error TS1128: Declaration or statement expected.
+src/components/seller/CreateAuctionForm.tsx(23,33): error TS2657: JSX expressions must have one parent element.
+src/components/seller/CreateAuctionForm.tsx(35,29): error TS1128: Declaration or statement expected.
+src/components/seller/CreateAuctionForm.tsx(36,25): error TS1109: Expression expected.
+src/components/seller/CreateAuctionForm.tsx(37,21): error TS1109: Expression expected.
+src/components/seller/CreateAuctionForm.tsx(38,17): error TS1109: Expression expected.
+src/components/seller/CreateAuctionForm.tsx(39,13): error TS1109: Expression expected.
+src/components/seller/CreateAuctionForm.tsx(40,9): error TS1109: Expression expected.
+src/components/seller/CreateAuctionForm.tsx(41,5): error TS1109: Expression expected.
+src/components/seller/CreateAuctionForm.tsx(42,1): error TS1128: Declaration or statement expected.

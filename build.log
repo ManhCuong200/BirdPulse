@@ -1,0 +1,8 @@
+
+> bidpulse-ui@0.0.0 build
+> tsc && vite build
+
+src/components/auction/BidCard.tsx(2,17): error TS6133: 'Eye' is declared but its value is never read.
+src/components/shared/Navbar.tsx(2,37): error TS6133: 'User' is declared but its value is never read.
+src/pages/bidder/HomePage.tsx(4,10): error TS6133: 'Search' is declared but its value is never read.
+src/pages/bidder/NotificationsPage.tsx(3,23): error TS6133: 'Info' is declared but its value is never read.

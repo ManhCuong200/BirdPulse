@@ -1,0 +1,5 @@
+
+> bidpulse-ui@0.0.0 build
+> tsc && vite build
+
+src/components/realtime/RealTimeBidFeed.tsx(1,28): error TS2307: Cannot find module '@/components/ui/scroll-area' or its corresponding type declarations.

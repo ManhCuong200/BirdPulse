@@ -1,0 +1,8 @@
+
+> bidpulse-ui@0.0.0 build
+> tsc && vite build
+
+src/components/bidder/ProfileView.tsx(5,58): error TS2307: Cannot find module '@/components/ui/tabs' or its corresponding type declarations.
+src/pages/bidder/ProfilePage.tsx(2,20): error TS6133: 'useEffect' is declared but its value is never read.
+src/pages/bidder/ProfilePage.tsx(5,18): error TS6133: 'setUser' is declared but its value is never read.
+src/pages/bidder/ProfilePage.tsx(12,20): error TS6133: 'setMyBids' is declared but its value is never read.
