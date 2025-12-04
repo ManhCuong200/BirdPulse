@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useForm } from "react-hook-form"
@@ -58,128 +58,112 @@ export function CreateAuctionForm({ onSubmit, onCancel }: CreateAuctionFormProps
 
     return (
         <div className="px-6 space-y-6">
-            <div className="flex items-center justify-between">
-                <h2 className="text-3xl font-bold tracking-tight">Create Auction</h2>
-            </div>
+            <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+                    <FormField
+                        control={form.control}
+                        name="title"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Item Title</FormLabel>
+                                <FormControl>
+                                    <Input placeholder="e.g. Vintage Rolex Submariner" {...field} />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
 
-            <div className="grid gap-6 max-w-2xl">
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Auction Details</CardTitle>
-                        <CardDescription>
-                            Enter the details for your new auction listing.
-                        </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <Form {...form}>
-                            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                                <FormField
-                                    control={form.control}
-                                    name="title"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>Item Title</FormLabel>
-                                            <FormControl>
-                                                <Input placeholder="e.g. Vintage Rolex Submariner" {...field} />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-
-                                <FormField
-                                    control={form.control}
-                                    name="description"
-                                    render={({ field }) => (
-                                        <FormItem>
-                                            <FormLabel>Description</FormLabel>
-                                            <FormControl>
-                                                <Textarea
-                                                    placeholder="Describe your item in detail..."
-                                                    className="min-h-[100px]"
-                                                    {...field}
-                                                />
-                                            </FormControl>
-                                            <FormMessage />
-                                        </FormItem>
-                                    )}
-                                />
-
-                                <div className="grid grid-cols-2 gap-4">
-                                    <FormField
-                                        control={form.control}
-                                        name="startPrice"
-                                        render={({ field }) => (
-                                            <FormItem>
-                                                <FormLabel>Starting Price ($)</FormLabel>
-                                                <FormControl>
-                                                    <Input type="number" {...field} />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
+                    <FormField
+                        control={form.control}
+                        name="description"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Description</FormLabel>
+                                <FormControl>
+                                    <Textarea
+                                        placeholder="Describe your item in detail..."
+                                        className="min-h-[100px]"
+                                        {...field}
                                     />
-                                    <FormField
-                                        control={form.control}
-                                        name="reservePrice"
-                                        render={({ field }) => (
-                                            <FormItem>
-                                                <FormLabel>Reserve Price ($)</FormLabel>
-                                                <FormControl>
-                                                    <Input type="number" {...field} />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
-                                    />
-                                </div>
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
 
-                                <div className="grid grid-cols-2 gap-4">
-                                    <FormField
-                                        control={form.control}
-                                        name="startDate"
-                                        render={({ field }) => (
-                                            <FormItem>
-                                                <FormLabel>Start Date</FormLabel>
-                                                <FormControl>
-                                                    <Input type="datetime-local" {...field} />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
-                                    />
-                                    <FormField
-                                        control={form.control}
-                                        name="endDate"
-                                        render={({ field }) => (
-                                            <FormItem>
-                                                <FormLabel>End Date</FormLabel>
-                                                <FormControl>
-                                                    <Input type="datetime-local" {...field} />
-                                                </FormControl>
-                                                <FormMessage />
-                                            </FormItem>
-                                        )}
-                                    />
-                                </div>
+                    <div className="grid grid-cols-2 gap-4">
+                        <FormField
+                            control={form.control}
+                            name="startPrice"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Starting Price ($)</FormLabel>
+                                    <FormControl>
+                                        <Input type="number" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="reservePrice"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Reserve Price ($)</FormLabel>
+                                    <FormControl>
+                                        <Input type="number" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    </div>
 
-                                <div className="grid gap-2">
-                                    <FormLabel>Images</FormLabel>
-                                    <Input type="file" multiple />
-                                    <p className="text-[0.8rem] text-muted-foreground">
-                                        Upload images of your item.
-                                    </p>
-                                </div>
+                    <div className="grid grid-cols-2 gap-4">
+                        <FormField
+                            control={form.control}
+                            name="startDate"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>Start Date</FormLabel>
+                                    <FormControl>
+                                        <Input type="datetime-local" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                        <FormField
+                            control={form.control}
+                            name="endDate"
+                            render={({ field }) => (
+                                <FormItem>
+                                    <FormLabel>End Date</FormLabel>
+                                    <FormControl>
+                                        <Input type="datetime-local" {...field} />
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
+                    </div>
 
-                                <div className="flex justify-end space-x-2 pt-4">
-                                    <Button variant="outline" type="button" onClick={onCancel}>Cancel</Button>
-                                    <Button type="submit">Create Auction</Button>
-                                </div>
-                            </form>
-                        </Form>
-                    </CardContent>
-                </Card>
-            </div>
+                    <div className="grid gap-2">
+                        <FormLabel>Images</FormLabel>
+                        <Input type="file" multiple />
+                        <p className="text-[0.8rem] text-muted-foreground">
+                            Upload images of your item.
+                        </p>
+                    </div>
+
+                    <div className="flex justify-end space-x-2 pt-4">
+                        <Button variant="outline" type="button" onClick={onCancel}>Cancel</Button>
+                        <Button type="submit">Create Auction</Button>
+                    </div>
+                </form>
+            </Form>
         </div>
     )
 }

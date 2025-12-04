@@ -1,11 +1,12 @@
 import { AuctionsTable } from "@/components/seller/AuctionsTable"
+import { CreateAuctionDialog } from "@/components/seller/CreateAuctionDialog"
 import { Auction } from "@/types"
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+
 
 export function ManageAuctions() {
     const [auctions, setAuctions] = useState<Auction[]>([])
-    const navigate = useNavigate()
+
 
     useEffect(() => {
         // Mock API
@@ -43,8 +44,10 @@ export function ManageAuctions() {
         ])
     }, [])
 
+    const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false)
+
     const handleCreateNew = () => {
-        navigate("/seller/create-auction")
+        setIsCreateDialogOpen(true)
     }
 
     const handleEdit = (id: string) => {
@@ -55,5 +58,10 @@ export function ManageAuctions() {
         console.log("Delete", id)
     }
 
-    return <AuctionsTable auctions={auctions} onCreateNew={handleCreateNew} onEdit={handleEdit} onDelete={handleDelete} />
+    return (
+        <>
+            <AuctionsTable auctions={auctions} onCreateNew={handleCreateNew} onEdit={handleEdit} onDelete={handleDelete} />
+            <CreateAuctionDialog open={isCreateDialogOpen} onOpenChange={setIsCreateDialogOpen} />
+        </>
+    )
 }
