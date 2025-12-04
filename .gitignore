@@ -1,5 +1,6 @@
 node_modules
-.agent
-.claude
-.cursor
-.windsurf
+.agent/
+.cursor/
+.shared/
+.windsurf/
+.claude/
